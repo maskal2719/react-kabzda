@@ -29,6 +29,9 @@ function App() {
             <UncontrolledAccordion titleValue={'Второй'}/>
 
             <UncontrolledRating />
+            <UncontrolledRating />
+            <UncontrolledRating />
+            <UncontrolledRating />
         </div>
     );
 }

@@ -14,7 +14,7 @@ export function UncontrolledRating(props: RatingPropsType) {
 
     return (
         <div>
-            <Star selected={value > 0 } onClickHandler={() => onClickHandler(1)}/>
+            <Star selected={value > 0} onClickHandler={() => onClickHandler(1)}/>
             <Star selected={value > 1} onClickHandler={() => onClickHandler(2)}/>
             <Star selected={value > 2} onClickHandler={() => onClickHandler(3)}/>
             <Star selected={value > 3} onClickHandler={() => onClickHandler(4)}/>
@@ -30,9 +30,10 @@ type StarPropsType = {
 
 function Star(props: StarPropsType) {
 
-    if (props.selected) {
-        return <span className='star' onClick={() => {props.onClickHandler()} }>&#9733;</span>
-    } else {
-        return <span className='star' onClick={() => {props.onClickHandler()} }>&#9734;</span>
-    }
+    return props.selected ? <span className='star' onClick={() => {
+        props.onClickHandler()
+    }}>&#9733;</span> : <span className='star' onClick={() => {
+        props.onClickHandler()
+    }}>&#9734;</span>
+
 }
