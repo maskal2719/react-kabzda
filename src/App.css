@@ -73,4 +73,7 @@
   background-color: chartreuse;
 }
 
+h3:hover {
+  cursor: pointer;
+}
 

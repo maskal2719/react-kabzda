@@ -1,15 +1,51 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-type OnOffPropsType = {
-    status: boolean
-}
+const OnOff = () => {
 
-const OnOff = (props: OnOffPropsType) => {
+    const [on, setOn] = useState(false)
+
+    const onStyle = {
+        width: '50px',
+        height: '30px',
+        border: '1px solid black',
+        display: 'inline-block',
+        padding: '5px',
+        backgroundColor: on ? 'green' : 'white'
+    }
+    const offStyle = {
+        width: '50px',
+        height: '30px',
+        border: '1px solid black',
+        display: 'inline-block',
+        marginLeft: '5px',
+        padding: '5px',
+        backgroundColor: !on ? 'red' : 'white'
+    }
+    const indicatorStyle = {
+        width: '20px',
+        height: '20px',
+        borderRadius: '10px',
+        border: '1px solid black',
+        display: 'inline-block',
+        marginLeft: '5px',
+        backgroundColor: on ? 'green' : 'red'
+    }
+
+    const onClickHandler = (status: boolean) => {
+        setOn(status)
+    }
+
     return (
-        <div className='main'>
-            <div className={props.status ? "green" : ""}>On</div>
-            <div className={!props.status ? "red" : ""}>Off</div>
-            <div className={props.status ? "circle green" : "circle red"}></div>
+        // <div className='main'>
+        //     <div className={props.status ? "green" : ""}>On</div>
+        //     <div className={!props.status ? "red" : ""}>Off</div>
+        //     <div className={props.status ? "circle green" : "circle red"}></div>
+        // </div>
+
+        <div>
+            <div onClick={() => onClickHandler(true)} style={onStyle}>On</div>
+            <div onClick={() => onClickHandler(false)} style={offStyle}>Off</div>
+            <div style={indicatorStyle}></div>
         </div>
     );
 };
