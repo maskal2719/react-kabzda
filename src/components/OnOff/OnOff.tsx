@@ -4,6 +4,9 @@ const OnOff = () => {
 
     const [on, setOn] = useState(false)
 
+
+    const user = ['3123','51235']
+
     const onStyle = {
         width: '50px',
         height: '30px',
@@ -31,9 +34,20 @@ const OnOff = () => {
         backgroundColor: on ? 'green' : 'red'
     }
 
+    function getUser (user: any){
+        return (
+            <li>{user}</li>
+        )
+    }
+
+
+
+
     const onClickHandler = (status: boolean) => {
         setOn(status)
     }
+
+
 
     return (
         // <div className='main'>
@@ -46,6 +60,7 @@ const OnOff = () => {
             <div onClick={() => onClickHandler(true)} style={onStyle}>On</div>
             <div onClick={() => onClickHandler(false)} style={offStyle}>Off</div>
             <div style={indicatorStyle}></div>
+            <div>{user.map(getUser)}</div>
         </div>
     );
 };
