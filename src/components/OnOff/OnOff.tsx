@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
 
-const OnOff = () => {
+type OnOffPropsType = {
+    value: boolean
+    callback: (value: boolean) => void
+}
 
-    const [on, setOn] = useState(false)
+const OnOff = (props: OnOffPropsType) => {
+
+
 
 
     const user = ['3123','51235']
@@ -13,7 +18,7 @@ const OnOff = () => {
         border: '1px solid black',
         display: 'inline-block',
         padding: '5px',
-        backgroundColor: on ? 'green' : 'white'
+        backgroundColor: props.value ? 'green' : 'white'
     }
     const offStyle = {
         width: '50px',
@@ -22,7 +27,7 @@ const OnOff = () => {
         display: 'inline-block',
         marginLeft: '5px',
         padding: '5px',
-        backgroundColor: !on ? 'red' : 'white'
+        backgroundColor: !props.value ? 'red' : 'white'
     }
     const indicatorStyle = {
         width: '20px',
@@ -31,7 +36,7 @@ const OnOff = () => {
         border: '1px solid black',
         display: 'inline-block',
         marginLeft: '5px',
-        backgroundColor: on ? 'green' : 'red'
+        backgroundColor: props.value ? 'green' : 'red'
     }
 
     function getUser (user: any){
@@ -40,14 +45,9 @@ const OnOff = () => {
         )
     }
 
-
-
-
     const onClickHandler = (status: boolean) => {
-        setOn(status)
+        props.callback(status)
     }
-
-
 
     return (
         // <div className='main'>

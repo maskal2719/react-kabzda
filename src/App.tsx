@@ -12,12 +12,9 @@ function App() {
 
     const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
     const [collapsedValue, setCollapsed] = useState<boolean>(false)
+    const [on, setOn] = useState(false)
 
     console.log(collapsedValue)
-
-    const onClickHandler = (collapsedValue: boolean) => {
-        setCollapsed(collapsedValue)
-    }
 
     return (
         <div>
@@ -44,8 +41,9 @@ function App() {
             {/*<UncontrolledRating />*/}
             {/*<UncontrolledRating />*/}
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <Accordion value={collapsedValue} titleValue={'123123231'} setCollapsed={setCollapsed}/>
-            {/*<OnOff/>*/}
+            <Accordion value={collapsedValue} titleValue={'123123231'} setCollapsed={() =>setCollapsed(!collapsedValue)}/>
+            <UncontrolledAccordion titleValue={'2222222222222'}/>
+            <OnOff value={on} callback={setOn}/>
         </div>
     );
 }
