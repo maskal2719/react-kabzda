@@ -60,7 +60,7 @@ const OnOff = (props: OnOffPropsType) => {
             <div onClick={() => onClickHandler(true)} style={onStyle}>On</div>
             <div onClick={() => onClickHandler(false)} style={offStyle}>Off</div>
             <div style={indicatorStyle}></div>
-            <div>{user.map(getUser)}</div>
+            {/*<div>{user.map(getUser)}</div>*/}
         </div>
     );
 };

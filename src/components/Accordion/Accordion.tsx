@@ -35,7 +35,7 @@ type AccordionTitlePropsType = {
 
 function AccordionTitle(props: AccordionTitlePropsType) {
     return (
-        <h3 onClick={props.setCollapsed}>{props.title}</h3>
+        <h3 onClick={(e) => props.setCollapsed()}>{props.title}</h3>
     )
 }
 
