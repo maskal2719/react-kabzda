@@ -1,32 +1,23 @@
 import React, {useState} from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import OnOff from "./OnOff";
 import {action} from "@storybook/addon-actions";
+import {UncontrolledAccordion} from "./UncontrolledAccordion";
 
 
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'OnOff',
-    component: OnOff,
+    title: 'UncontrolledAccordion',
+    component: UncontrolledAccordion,
     // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof OnOff>;
+} as ComponentMeta<typeof UncontrolledAccordion>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 
 
-export const On: ComponentStory<typeof OnOff> = () => <OnOff value={true} callback={action('clicked true')}/>;
-export const Off: ComponentStory<typeof OnOff> = () => <OnOff value={false} callback={action('clicked off')}/>;
-
-
-
-export const ModeChanging: ComponentStory<typeof OnOff> = () => {
-    const [status, setStatus] = useState<boolean>(false)
-    return <OnOff value={status} callback={setStatus}/>;
-}
-
+export const On: ComponentStory<typeof UncontrolledAccordion> = (args) => <UncontrolledAccordion titleValue={'33232323'}/>;
 
 

@@ -19,12 +19,12 @@ export default {
 
 
 
-export const AccordionDefaultCol: ComponentStory<typeof Accordion> = () => <Accordion value={true} titleValue={'Dimon gey'} setCollapsed={action('collapsed')}/>;
-export const AccordionDefaultUncol: ComponentStory<typeof Accordion> = () => <Accordion value={false} titleValue={'Dimon gey'} setCollapsed={action('uncollapsed')}/>;
+export const AccordionDefaultCol: ComponentStory<typeof Accordion> = () => <Accordion value={true} titleValue={'Users'} setCollapsed={action('collapsed')}/>;
+export const AccordionDefaultUncol: ComponentStory<typeof Accordion> = () => <Accordion value={false} titleValue={'Tasks'} setCollapsed={action('uncollapsed')}/>;
 
 export const AccordionState: ComponentStory<typeof Accordion> = (args) => {
     const [col, setCol] = useState<boolean>(true)
- return <Accordion value={col} titleValue={'Dimon gey'} setCollapsed={() => setCol(!col)}/>;
+ return <Accordion value={col} titleValue={'Users'} setCollapsed={() => setCol(!col)}/>;
 }
 
 
