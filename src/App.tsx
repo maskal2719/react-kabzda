@@ -41,7 +41,7 @@ function App() {
             {/*<UncontrolledRating />*/}
             {/*<UncontrolledRating />*/}
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <Accordion value={collapsedValue} titleValue={'123123231'} setCollapsed={() =>setCollapsed(!collapsedValue)}/>
+            {/*<Accordion onClick={} items={[{title:'Stas', value: 612341},{title:'Denis', value: 654675467},]} value={collapsedValue} titleValue={'123123231'} setCollapsed={() =>setCollapsed(!collapsedValue)}/>*/}
             <UncontrolledAccordion titleValue={'2222222222222'}/>
             <OnOff value={on} callback={setOn}/>
         </div>

@@ -19,12 +19,13 @@ export default {
 
 
 
-export const AccordionDefaultCol: ComponentStory<typeof Accordion> = () => <Accordion value={true} titleValue={'Users'} setCollapsed={action('collapsed')}/>;
-export const AccordionDefaultUncol: ComponentStory<typeof Accordion> = () => <Accordion value={false} titleValue={'Tasks'} setCollapsed={action('uncollapsed')}/>;
+export const AccordionDefaultCol: ComponentStory<typeof Accordion> = () => <Accordion onClick={()=>{}} items={[{title:'Stas', value: 612341},{title:'Denis', value: 654675467},]} value={true} titleValue={'Users'} setCollapsed={action('collapsed')}/>;
+export const AccordionDefaultUncol: ComponentStory<typeof Accordion> = () => <Accordion onClick={()=>{}} items={[{title:'Stas', value: 612341},{title:'Denis', value: 654675467},]} value={false} titleValue={'Tasks'} setCollapsed={action('uncollapsed')}/>;
 
 export const AccordionState: ComponentStory<typeof Accordion> = (args) => {
     const [col, setCol] = useState<boolean>(true)
- return <Accordion value={col} titleValue={'Users'} setCollapsed={() => setCol(!col)}/>;
+
+ return <Accordion onClick={(value)=>{alert(value)}} items={[{title:'Stas', value: 612341},{title:'Denis', value: 654675467},]} value={col} titleValue={'Users'} setCollapsed={() => setCol(!col)}/>;
 }
 
 
