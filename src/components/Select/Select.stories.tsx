@@ -40,6 +40,22 @@ export const SelectHW: ComponentStory<typeof Select> = (args) => {
         ]
         }/>
 }
+export const SelectHW1: ComponentStory<typeof Select> = (args) => {
+
+
+    return <Select
+        onChange={()=> action('edit')}
+        items={[
+            {title: 'Stas', value: 1},
+            {title: 'Denis', value: 2},
+            {title: 'Oleg', value: 3},
+            {title: 'Igor', value: 4},
+            {title: 'Jeny', value: 5},
+            {title: 'Tima', value: 6},
+            {title: 'Any', value: 7},
+        ]
+        }/>
+}
 
 
 
