@@ -5,6 +5,7 @@ import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import {UncontrolledAccordion} from "./components/UncontolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
+import Clock from "./components/Clock/Clock";
 
 export type RatingValueType = 0|1|2|3|4|5
 
@@ -35,15 +36,15 @@ function App() {
             {/*<OnOff />*/}
             {/*<UncontrolledAccordion titleValue={'Первый'}/>*/}
             {/*<UncontrolledAccordion titleValue={'Второй'}/>*/}
-
             {/*<UncontrolledRating />*/}
             {/*<UncontrolledRating />*/}
             {/*<UncontrolledRating />*/}
             {/*<UncontrolledRating />*/}
-            <Rating value={ratingValue} onClick={setRatingValue}/>
+            {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
             {/*<Accordion onClick={} items={[{title:'Stas', value: 612341},{title:'Denis', value: 654675467},]} value={collapsedValue} titleValue={'123123231'} setCollapsed={() =>setCollapsed(!collapsedValue)}/>*/}
-            <UncontrolledAccordion titleValue={'2222222222222'}/>
-            <OnOff value={on} callback={setOn}/>
+            {/*<UncontrolledAccordion titleValue={'2222222222222'}/>*/}
+            {/*<OnOff value={on} callback={setOn}/>*/}
+            <Clock/>
         </div>
     );
 }
