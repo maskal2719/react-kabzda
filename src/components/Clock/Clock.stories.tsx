@@ -11,8 +11,14 @@ export default {
     },
 } as ComponentMeta<typeof Rating>;
 
-export const ClockStories = () => {
+export const BaseAnalogEx = () => {
     return (
-        <Clock/>
+        <Clock mode={'analog'}/>
+    )
+}
+
+export const BaseDigitalEx = () => {
+    return (
+        <Clock mode={"digital"}/>
     )
 }
